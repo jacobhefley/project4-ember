@@ -53,4 +53,9 @@
     <span>Description:</span> {{rental.description}}
   </div>
 </article>
+{{#each rental.reviews as |review|}}
+<div class="alert alert-info" role="alert">
+  <p><small>{{review.author}} says: {{review.content}}</small></p>
+</div>
+{{/each}}
 </div>

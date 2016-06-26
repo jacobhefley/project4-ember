@@ -15,7 +15,7 @@ export default Ember.Component.extend({
         author: this.get('author'),
         content: this.get('content'),
         rating: parseFloat(this.get('rating')),
-        question: this.get('question')
+        rental: this.get('rental')
       };
       this.set('showReviewForm', false);
       this.sendAction('saveReviewToRental', params);
