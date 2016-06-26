@@ -33,6 +33,8 @@
   <div class="detail description">
     <span>Description:</span> {{input value=description id="description" type="textarea"}}
   </div>
+  <button class="button" {{action 'saveRental'}}>Save</button>
+  <button class="button" {{action 'cancelSave'}}>Cancel</button>
 </article>
 {{else}}
   <button class="button" {{action 'rentalFormShow' }}>New Rental</button>

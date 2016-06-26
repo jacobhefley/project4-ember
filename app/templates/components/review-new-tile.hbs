@@ -1,1 +1,17 @@
-{{yield}}
+{{#if showReviewForm}}
+<article class="listing">
+  <div class="detail author">
+    <span>Author:</span> {{input value=author id="author" type="text"}}
+  </div>
+  <div class="detail content">
+    <span>Content:</span> {{input value=content id="content" type="text"}}
+  </div>
+  <div class="detail rating">
+    <span>Rating:</span> {{input value=rating id="rating" type="text"}}
+  </div>
+  <button class="button" {{action 'saveReview'}}>Save</button>
+  <button class="button" {{action 'cancelSave'}}>Cancel</button>
+</article>
+{{else}}
+  <button class="button" {{action 'reviewFormShow' }}>Add Review</button>
+{{/if}}

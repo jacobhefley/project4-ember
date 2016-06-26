@@ -5,6 +5,23 @@ export default Ember.Route.extend({
     return this.store.findRecord('rental', params.rental_id);
   },
   actions: {
+    updateRental(rental, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          rental.set(key,params[key]);
+        }
+      });
+      rental.save();
+    },
+    saveReviewToRental(params) {
+      var newReview = this.store.createRecord('review', params);
+      var rental = params.rental;
+      rental.get('reviews').addObject(newReview);
+      newReview.save().then(function() {
+        return rental.save();
+      });
+    this.transitionTo('rental', params.rental);
+    }
     // save3(params) {
     //   var newRental = this.store.createRecord('rental', params);
     //   var city = params.city;

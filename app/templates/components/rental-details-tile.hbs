@@ -18,7 +18,9 @@
     <span>New</span>
   </div>
 </article> -->
+<div class="jumbo">
 <article class="listing">
+    <img src="{{rental.image}}" alt="">
   <div class="detail title">
     <span>Title:</span> {{rental.title}}
   </div>
@@ -47,9 +49,8 @@
     <span>Cost per month:</span> {{rental.cost}}
   </div>
 
-  <img src="{{rental.image}}" alt="">
-
   <div class="detail description">
-    <span>Description:</span> {{input value=description id="description" type="textarea"}}
+    <span>Description:</span> {{rental.description}}
   </div>
 </article>
+</div>

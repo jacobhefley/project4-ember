@@ -1,20 +1,18 @@
 <div class="jumbo">
-  <div class="right tomster"></div>
-  <h2>Welcome!</h2>
-  <p>
+  <!-- <div class="right tomster"></div> -->
+  <!-- <h2>Welcome!</h2> -->
+  <!-- <p>
     We hope you find exactly what you're looking for in a place to stay.
     <br>Browse our listings, or use the search box above to narrow your search.
-  </p>
+  </p> -->
 
 {{rental-new-tile saveRental="saveRental"}}
 
-  {{#link-to 'index' class="button"}}
-    About Us
-  {{/link-to}}
 </div>
 
-{{#link-to 'rental' rental.id}}
-  {{#each model.rentals as |rental|}}
+
+{{#each model.rentals as |rental|}}
+  {{#link-to 'rental' rental.id}}
     {{rental-index-tile rental=rental}}
-  {{/each}}
-{{/link-to}}
+  {{/link-to}}
+{{/each}}

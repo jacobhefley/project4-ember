@@ -1,1 +1,41 @@
-{{yield}}
+{{#if updateRentalForm}}
+<article class="listing">
+  <div class="detail title">
+    <span>Title:</span> {{input value=rental.title id="title" type="text"}}
+  </div>
+  <div class="detail contact">
+    <span>Contact:</span> {{input value=rental.contact id="contact" type="text"}}
+  </div>
+  <div class="detail address">
+    <span>Address:</span> {{input value=rental.address id="address" type="text"}}
+  </div>
+  <div class="detail city">
+    <span>City:</span> {{input value=rental.city id="city" type="text"}}
+  </div>
+  <div class="detail state">
+    <span>State:</span> {{input value=rental.state id="state" type="text"}}
+  </div>
+  <div class="detail zip">
+    <span>Zip:</span> {{input value=rental.zip id="zip" type="text"}}
+  </div>
+  <div class="detail bedrooms">
+    <span>Number of bedrooms:</span> {{input value=rental.bedrooms id="bedrooms" type="text"}}
+  </div>
+  <div class="detail bathrooms">
+    <span>Number of bathrooms:</span> {{input value=rental.bathrooms id="bathrooms" type="text"}}
+  </div>
+  <div class="detail cost">
+    <span>Cost per month:</span> {{input value=rental.cost id="cost" type="text"}}
+  </div>
+  <div class="detail image">
+    <span>Image:</span> {{input value=rental.image id="image" type="text"}}
+  </div>
+  <div class="detail description">
+    <span>Description:</span> {{input value=rental.description id="description" type="textarea"}}
+  </div>
+  <button class="button" {{action 'updateRental'}}>Update</button>
+  <button class="button" {{action 'cancelEdit'}}>Cancel</button>
+</article>
+{{else}}
+  <button class="button" {{action 'updateRentalFormShow' }}>Edit</button>
+{{/if}}

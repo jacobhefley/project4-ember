@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     rentalFormShow() {
       this.set('addNewRental', true);
     },
+    cancelSave() {
+      this.set('addNewRental', false);
+    },
     saveRental() {
      var params = {
        title: this.get('title'),
