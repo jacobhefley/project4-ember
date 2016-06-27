@@ -1,0 +1,5 @@
+{{#each favorites.rentals as |rental|}}
+  {{#link-to 'rental' rental.id}}
+    {{rental-index-tile rental=rental}}
+  {{/link-to}}
+{{/each}}

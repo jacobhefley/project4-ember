@@ -13,6 +13,6 @@
 
 {{#each model.rentals as |rental|}}
   {{#link-to 'rental' rental.id}}
-    {{rental-index-tile rental=rental}}
+    {{rental-index-tile rental=rental update="update"}}
   {{/link-to}}
 {{/each}}

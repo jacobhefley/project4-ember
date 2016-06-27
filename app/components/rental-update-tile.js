@@ -9,22 +9,22 @@ export default Ember.Component.extend({
     cancelEdit() {
       this.set('updateRentalForm', false);
     },
-    updateRental(rental) {
+    update(rental) {
       var params = {
-        title: this.get('title'),
-        contact: this.get('contact'),
-        address: this.get('address'),
-        city: this.get('city'),
-        state: this.get('state'),
-        zip: this.get('zip'),
-        bedrooms: parseInt(this.get('bedrooms')),
-        bathrooms: parseInt(this.get('bathrooms')),
-        cost: parseInt(this.get('cost')),
-        description: this.get('description'),
-        image: this.get('image')
+        title: this.get('rental.title'),
+        contact: this.get('rental.contact'),
+        address: this.get('rental.address'),
+        city: this.get('rental.city'),
+        state: this.get('rental.state'),
+        zip: this.get('rental.zip'),
+        bedrooms: parseInt(this.get('rental.bedrooms')),
+        bathrooms: parseInt(this.get('rental.bathrooms')),
+        cost: parseInt(this.get('rental.cost')),
+        description: this.get('rental.description'),
+        image: this.get('rental.image')
       };
       this.set('updateRentalForm', false);
-      this.sendAction('updateRental', rental, params);
+      this.sendAction('update', rental, params);
     }
   }
 });

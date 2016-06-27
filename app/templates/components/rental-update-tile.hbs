@@ -25,7 +25,7 @@
     <span>Number of bathrooms:</span> {{input value=rental.bathrooms id="bathrooms" type="text"}}
   </div>
   <div class="detail cost">
-    <span>Cost per month:</span> {{input value=rental.cost id="cost" type="text"}}
+    <span>Cost per month:</span> {{input value=rental.cost id="cost" type="number"}}
   </div>
   <div class="detail image">
     <span>Image:</span> {{input value=rental.image id="image" type="text"}}
@@ -33,7 +33,7 @@
   <div class="detail description">
     <span>Description:</span> {{input value=rental.description id="description" type="textarea"}}
   </div>
-  <button class="button" {{action 'updateRental'}}>Update</button>
+  <button class="button" {{action 'update' rental}}>Update</button>
   <button class="button" {{action 'cancelEdit'}}>Cancel</button>
 </article>
 {{else}}
